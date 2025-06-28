@@ -34,7 +34,7 @@ function About() {
           viewport={{ once: true }}
         >
           <img
-            src="./public/images/acrilic1.jpg"
+            src="./public/profile.jpg"
             alt="Artist Claudia Safta"
             className="w-72 h-72 object-cover rounded-2xl shadow-lg"
           />
