@@ -2,18 +2,27 @@ import "./App.css";
 import Gallery from "./components/Gallery";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import About from "./components/About";
+import { useState } from "react";
 
 function App() {
+  const [activeSection, setActiveSection] = useState("home");
+  const handleNavigate = (section) => {
+    setActiveSection(section);
+  };
+
   return (
-    <div className="font-sans text-gray-800">
-      {/* Header */}
-      <Header />
+    <>
+      <Header onNavigate={handleNavigate} />
 
-      {/* Hero */}
-      <Hero />
+      {activeSection === "home" && (
+        <section id="home" className="min-h-screen">
+          <Hero onNavigate={handleNavigate} />
+        </section>
+      )}
 
-      {/* Lucrari  */}
-      <Gallery />
+      {activeSection === "gallery" && <Gallery />}
+      {activeSection === "about" && <About />}
 
       {/* Footer */}
       <footer className="text-center py-6 mt-10 border-t">
@@ -21,7 +30,7 @@ function App() {
           @ 2025 Claudia Safta | urmeazama pe Instagram @claudiasafta_draw
         </p>
       </footer>
-    </div>
+    </>
   );
 }
 

@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-function Header() {
+function Header({ onNavigate }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleLinkClick = () => {
+  const handleLinkClick = (section) => {
+    onNavigate(section);
     setIsOpen(false);
   };
 
@@ -15,18 +16,30 @@ function Header() {
 
       {/* Desktop nav */}
       <nav className="hidden md:flex space-x-6 text-gray-600 text-sm font-medium">
-        <a href="#home" className="hover:text-gray-900 transition-colors">
+        <button
+          onClick={() => onNavigate("home")}
+          className="hover:text-gray-900"
+        >
           Home
-        </a>
-        <a href="#gallery" className="hover:text-gray-900 transition-colors">
+        </button>
+        <button
+          onClick={() => onNavigate("gallery")}
+          className="hover:text-gray-900"
+        >
           Gallery
-        </a>
-        <a href="#about" className="hover:text-gray-900 transition-colors">
+        </button>
+        <button
+          onClick={() => onNavigate("about")}
+          className="hover:text-gray-900"
+        >
           About
-        </a>
-        <a href="#contact" className="hover:text-gray-900 transition-colors">
+        </button>
+        <button
+          onClick={() => onNavigate("contact")}
+          className="hover:text-gray-900"
+        >
           Contact
-        </a>
+        </button>
       </nav>
 
       {/* Mobile burger button */}
@@ -50,28 +63,28 @@ function Header() {
           >
             <a
               href="#gallery"
-              onClick={handleLinkClick}
+              onClick={() => handleLinkClick("home")}
               className="hover:text-gray-900 transition-colors"
             >
               Home
             </a>
             <a
               href="#gallery"
-              onClick={handleLinkClick}
+              onClick={() => handleLinkClick("gallery")}
               className="hover:text-gray-900 transition-colors"
             >
               Gallery
             </a>
             <a
               href="#gallery"
-              onClick={handleLinkClick}
+              onClick={() => handleLinkClick("about")}
               className="hover:text-gray-900 transition-colors"
             >
               About
             </a>
             <a
               href="#gallery"
-              onClick={handleLinkClick}
+              onClick={() => handleLinkClick("contact")}
               className="hover:text-gray-900 transition-colors"
             >
               Contact

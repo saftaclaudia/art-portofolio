@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import myPortrait from "../assets/profile.jpg";
 
-export default function Hero() {
+export default function Hero({ onNavigate }) {
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center px-6 bg-gradient-to-b from-gray-50 to-gray-100">
       <div className="max-w-4xl mx-auto text-center">
@@ -38,15 +38,13 @@ export default function Hero() {
         </motion.p>
 
         {/*  Buton */}
-        <Link to="gallery" smooth={true} duration={500}>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-gray-800 text-white px-6 py-2 rounded-full font-medium shadow-md hover:bg-gray-900 transition"
-          >
-            View Gallery
-          </motion.button>
-        </Link>
+
+        <button
+          onClick={() => onNavigate("gallery")}
+          className="bg-gray-800 text-white px-6 py-2 rounded-full font-medium shadow-md hover:bg-gray-900 transition"
+        >
+          View Gallery
+        </button>
       </div>
     </section>
   );
