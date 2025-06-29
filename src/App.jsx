@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import { useState } from "react";
+import Contact from "./components/Contact";
 
 function App() {
   const [activeSection, setActiveSection] = useState("home");
@@ -23,6 +24,8 @@ function App() {
 
       {activeSection === "gallery" && <Gallery />}
       {activeSection === "about" && <About />}
+      {activeSection === "about" && <About />}
+      {activeSection === "contact" && <Contact />}
 
       {/* Footer */}
       <footer className="text-center py-6 mt-10 border-t">

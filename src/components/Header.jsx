@@ -83,7 +83,7 @@ function Header({ onNavigate }) {
               About
             </a>
             <a
-              href="#gallery"
+              href="#contact"
               onClick={() => handleLinkClick("contact")}
               className="hover:text-gray-900 transition-colors"
             >
