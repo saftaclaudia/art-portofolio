@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 function About() {
   return (
-    <section id="about" className="py-20 px-6 bg-gray-50 text-gray-800">
+    <section id="about" className="py-20 px-6 text-gray-800">
       <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-10 items-center ">
         {/* Textul */}
         <motion.div

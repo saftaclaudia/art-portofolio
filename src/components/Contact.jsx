@@ -33,10 +33,7 @@ function Contact() {
   };
 
   return (
-    <section
-      id="contact"
-      className="py-20 px-6 bg-gradient-to-b from-gray-50 to-white"
-    >
+    <section id="contact" className="pt-20 pb-4 px-4">
       <div className="max-w-2xl mx-auto">
         <h2 className="text-3xl font-bold text-gray-800 text-center mb-6">
           Contact

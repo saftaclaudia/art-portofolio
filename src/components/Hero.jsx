@@ -4,7 +4,7 @@ import myPortrait from "../assets/profile.jpg";
 
 export default function Hero({ onNavigate }) {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center px-6 bg-gradient-to-b from-gray-50 to-gray-100">
+    <section className="relative min-h-[80vh] flex items-center justify-center px-6 ">
       <div className="max-w-4xl mx-auto text-center">
         {/* Profile image */}
         <motion.img

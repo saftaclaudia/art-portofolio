@@ -1,10 +1,11 @@
 import "./App.css";
 import Gallery from "./components/Gallery";
+import { useState } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import { useState } from "react";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   const [activeSection, setActiveSection] = useState("home");
@@ -13,27 +14,23 @@ function App() {
   };
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-neutral-50 to-neutral-100">
       <Header onNavigate={handleNavigate} />
 
-      {activeSection === "home" && (
-        <section id="home" className="min-h-screen">
-          <Hero onNavigate={handleNavigate} />
-        </section>
-      )}
+      <main className="flex-grow ">
+        {activeSection === "home" && (
+          <section id="home">
+            <Hero onNavigate={handleNavigate} />
+          </section>
+        )}
 
-      {activeSection === "gallery" && <Gallery />}
-      {activeSection === "about" && <About />}
-      {activeSection === "about" && <About />}
-      {activeSection === "contact" && <Contact />}
+        {activeSection === "gallery" && <Gallery />}
+        {activeSection === "about" && <About />}
+        {activeSection === "contact" && <Contact />}
+      </main>
 
-      {/* Footer */}
-      <footer className="text-center py-6 mt-10 border-t">
-        <p className="text-sm text-gray-500">
-          @ 2025 Claudia Safta | urmeazama pe Instagram @claudiasafta_draw
-        </p>
-      </footer>
-    </>
+      <Footer />
+    </div>
   );
 }
 
