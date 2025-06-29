@@ -129,7 +129,7 @@ export default function Gallery() {
   return (
     <section
       id="gallery"
-      className=" bg-gradient-to-b from-neutral-50 to-neutral-100 px-4 py-16 sm:px-8 lg:px20"
+      className="bg-gradient-to-b from-neutral-50 to-neutral-100 px-4 py-16 sm:px-8 lg:px20"
     >
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-semibold text-gray-800 mb-10 text-center">

@@ -2,7 +2,7 @@ import { Instagram } from "lucide-react";
 
 function Footer() {
   return (
-    <footer className="border border-gray-200 pt-8 pb-4  text-center text-sm text-gray-600">
+    <footer className="border-t border-gray-200 pt-8 pb-4  text-center text-sm text-gray-600">
       <p className="mb-2">© {new Date().getFullYear()} Art by Claudia</p>
 
       <div className="flex gap-2 justify-center items-center">
