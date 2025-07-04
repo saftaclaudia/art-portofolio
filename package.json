@@ -10,12 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.50.2",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^12.19.1",
     "lucide-react": "^0.523.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-scroll": "^1.9.3"
+    "react-scroll": "^1.9.3",
+    "uuid": "^11.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
