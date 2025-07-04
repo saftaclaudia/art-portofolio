@@ -10,9 +10,9 @@ export default function Hero({ onNavigate }) {
         <motion.img
           src={myPortrait}
           alt="Self portret"
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
           className="w-32 h-32 md:w-40 md:h-40 object-cover rounded-full mx-auto mb-6 shadow-lg border-4 border-white"
         />
 
@@ -39,12 +39,16 @@ export default function Hero({ onNavigate }) {
 
         {/*  Buton */}
 
-        <button
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          animate={{ scale: [1, 1.05, 1] }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          className="bg-gray-800 text-white px-6 py-3 rounded-xl font-medium shadow-md"
           onClick={() => onNavigate("gallery")}
-          className="bg-gray-800 text-white px-6 py-2 rounded-full font-medium shadow-md hover:bg-gray-900 transition"
         >
           View Gallery
-        </button>
+        </motion.button>
       </div>
     </section>
   );
