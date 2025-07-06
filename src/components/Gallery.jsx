@@ -36,11 +36,14 @@ export default function Gallery() {
               key={artwork.id}
               className="border rounded shadow hover:shadow-md transition p-4 bg-white"
             >
-              <img
-                src={artwork.image_url}
-                alt={artwork.title}
-                className="w-full h-64 object-cover mb-4 rounded"
-              />
+              <div className="aspect-[4/3] w-full overflow-hidden rounded">
+                <img
+                  src={artwork.image_url}
+                  alt={artwork.title}
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+
               <h3 className="text-lg font-semibold">Title: {artwork.title}</h3>
               <p className="text-sm text-gray-500">Medium: {artwork.medium}</p>
             </div>
